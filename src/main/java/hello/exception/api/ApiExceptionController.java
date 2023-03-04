@@ -2,8 +2,6 @@ package hello.exception.api;
 
 import hello.exception.exception.BadRequestException;
 import hello.exception.exception.UserException;
-import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -44,12 +42,5 @@ public class ApiExceptionController {
     @GetMapping("/api/default-handler-ex")
     public String defaultException(@RequestParam Integer data) {
         return "ok";
-    }
-
-    @Data
-    @AllArgsConstructor
-    static class MemberDto {
-        private String memberId;
-        private String name;
     }
 }
